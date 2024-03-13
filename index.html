@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spirit Flight 1878</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      pre {
+        margin-left: 30px;
+        scale: 1.2 1;
+        cursor: pointer;
+        position: absolute;
+        top: 20vh;
+      }
+      a{
+        text-decoration: none;
+        color:black;
+      }
+      a:hover{
+        color: rgb(255, 255, 0);
+      }
+      #stars{
+        color: white;
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <pre>
+        <a id="plane" href="play.html">
+
+                      ___
+                      \\ \
+                       \\ `\
+    ___                 \\  \
+   |    \                \\  `\
+   |_____\                \    \
+   |______\                \    `\
+   |       \                \     \
+   |      __\__---------------------------------._.
+ __|---~~~__o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_o_[][\__
+|___                         /~      )                \__
+    ~~~---..._______________/      ,/_________________/
+                           /      /
+                          /     ,/
+                         /     /
+                        /    ,/
+                       /    /
+                      //  ,/
+                     //  /
+                    // ,/
+                   //_/
+                </a>
+
+    </pre>
+    <pre id="stars">
+        *
+                        .                                   :                                                       :                   :
+
+
+                                                                                    .                   .
+                . 
+                            *                   .
+                                                                                                        .                       .
+
+                                                                        :
+    *.  +
+                                .                                                                               .
+
+
+                        .                                                                                                   
+                                                                                                                                                    .
+
+:                                                                                                                       
+            .            .
+                                         .
+                                                                                                                                         *
+                                    :
+                                                                                                                        .
+                                              
+                                                    .
+                                       :                                                                                                    :
+                                                            .
+                .
+        .                                       +
+    * *
+                                    .                                                   .                       .
+
+
+
+
+        :
+                                                                                *
+                                                                                                .
+                                    
+                                                                                                        .                           .
+      .                              
+                    .                
+                                                                                                    +                   
+                                    * .                         . 
+                                    .    .    .                                         .       .
+    </pre>
+
+    <script>
+      document.getElementById("plane").addEventListener("click", function () {
+        var plane = document.getElementById("plane");
+        plane.style.color = "yellow";
+        isPopupBlocked();
+      });
+
+      function openMorePopups(){
+        window.open('age.html', 'a', 'width=200, height=100, left=550, top=340');
+        window.open('grief.html', 'e', 'width=650, height=100, left=500, top=520');
+        window.open('flight.html', 'f', 'width=350, height=100, left=480, top=132');
+        window.open('hair.html', 'g', 'width=300, height=80, left=730, top=420');
+        window.open('travel.html', 'c', 'width=300, height=100, left=260, top=350');
+        window.open('kids.html', 'd', 'width=200, height=100, left=730, top=650');
+        window.open('husband.html', 'b', 'width=450, height=80, left=680, top=270');
+      }
+
+      function isPopupBlocked() {
+        // Open a dummy popup
+        var popup = window.open("", "test-popup", "width=1,height=1");
+        if (!popup || popup.closed || typeof popup.closed === "undefined") {
+          // Popup was blocked
+          alert(
+            "You have popups blocked. Allow popups and reload the page to see the characters!"
+          );
+          return true;
+        }
+        // Close the dummy popup
+        popup.close();
+        openMorePopups();
+        // Popup wasn't blocked
+        return false;
+      }
+      document
+        .getElementById("plane")
+        .addEventListener("mouseover", function () {
+          document.body.style.backgroundColor = "black";
+        });
+
+      document
+        .getElementById("plane")
+        .addEventListener("mouseout", function () {
+          document.body.style.backgroundColor = ""; // Reset to default
+        });
+    </script>
+  </body>
+</html>

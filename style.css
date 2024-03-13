@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(19, 19, 19);
+    margin: 0;
+}
+.container {
+    display: flex; /* Make the container a flexbox */
+    width: 100vw; /* Take up the entire viewport width */
+    height: 100vh; /* Take up the entire viewport height */
+  }
+  
+  .video-left, .video-right {
+    flex: 1; /* Make each video section take up half the space */
+    position: relative; /* Needed for object-fit property */
+  }
+  
+  video {
+    width: 100%; /* Make the video fill its container width */
+    height: auto; /* Allow video height to adjust proportionally */
+    position: absolute; /* Needed for object-fit property */
+    top: 0; /* Position video to top of container */
+    left: 0; /* Position video to left of container */
+    object-fit: cover; /* Scale video to cover container while maintaining aspect ratio */
+  }
+  
+  #customAlert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* Change background color */
+    border: 1px solid #ccc; /* Add border */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    display: none; /* Initially hidden */
+  }
+  
+  #customAlert.hidden {
+    display: none; /* Hide the alert with hidden class */
+  }
+  
+  #alertMessage {
+    margin-bottom: 10px; /* Space between message and button */
+  }

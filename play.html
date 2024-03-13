@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spirit Flight 1878</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-left">
+        <video
+          src="first.mov"
+          autoplay
+          muted
+          loop
+          onclick="showAlert('a quiet interior of a house in prague with an old woman sitting, afraid')"
+        ></video>
+      </div>
+      <div class="video-right">
+        <video
+          src="second.mov"
+          autoplay
+          muted
+          loop
+          onclick="showAlert('70 year old puerto rican woman with short gray hair and youthful glow driving around all major European cities. She is brave, excited. She has a heart monitor on. The background should change and show many different cities in a quick looped animation')"
+        ></video>
+      </div>
+    </div>
+    <script>
+      function showAlert(message) {
+        alert(message);
+      }
+    </script>
+  </body>
+</html>
